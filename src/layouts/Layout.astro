@@ -1,0 +1,45 @@
+---
+import '@fontsource/space-mono';
+import '@fontsource/space-grotesk';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Brutalist Photography Portfolio" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--neon-pink: #ff00ff;
+		--neon-purple: #9d00ff;
+		--dark: #111111;
+	}
+	html {
+		font-family: 'Space Grotesk', system-ui, sans-serif;
+		background: var(--dark);
+		color: white;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	h1, h2, h3 {
+		font-family: 'Space Mono', monospace;
+		text-transform: uppercase;
+	}
+</style>

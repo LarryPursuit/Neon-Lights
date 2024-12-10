@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PhotoGrid from '../components/PhotoGrid.astro';
+
+const images = [
+  { src: "/photo1.jpg", alt: "Pink neon-lit interior with palm plants" },
+  { src: "/photo2.jpg", alt: "Shelf with bottles in pink neon lighting" },
+  { src: "/photo3.jpg", alt: "Store interior with pink neon ambiance" },
+  { src: "/photo4.jpg", alt: "Speed bump sign in purple neon lighting" },
+  { src: "/photo5.jpg", alt: "Night street scene with crosswalk" },
+  { src: "/photo6.jpg", alt: "Night consrut with crosswalk" },
+  { src: "/photo7.jpg", alt: "Bicyclist passing by an officer" },
+  { src: "/photo8.jpg", alt: "Even in  light some light is still bright" },
+];
+---
+
+<Layout title="NEON BRUTALISM">
+	<main>
+		<header>
+			<h1>NEON<br>NIGHTS</h1>
+			<p class="subtitle">A BRUTALIST PHOTOGRAPHY COLLECTION</p>
+		</header>
+
+		<PhotoGrid images={images} />
+	</main>
+</Layout>
+
+<style>
+	main {
+		padding: 2rem;
+		max-width: 1800px;
+		margin: 0 auto;
+	}
+
+	header {
+		margin: 4rem 0;
+		border-left: 4px solid var(--neon-pink);
+		padding-left: 2rem;
+	}
+
+	h1 {
+		font-size: clamp(3rem, 10vw, 8rem);
+		line-height: 0.9;
+		margin: 0;
+		font-weight: 700;
+		background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		filter: drop-shadow(0 0 0.5rem var(--neon-pink));
+	}
+
+	.subtitle {
+		font-family: 'Space Mono', monospace;
+		font-size: 1.2rem;
+		margin-top: 1rem;
+		color: #666;
+		letter-spacing: 0.1em;
+	}
+
+	@media (max-width: 768px) {
+		main {
+			padding: 1rem;
+		}
+
+		header {
+			margin: 2rem 0;
+			padding-left: 1rem;
+		}
+	}
+</style>
