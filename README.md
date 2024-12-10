@@ -1,5 +1,7 @@
 # Neon Lights
 
+![alt text](<NEON BRUTALISM.jpeg>)
+
 Welcome to the Neon Lights project! This project is designed to create stunning neon light effects using modern web technologies.
 
 ## Table of Contents
